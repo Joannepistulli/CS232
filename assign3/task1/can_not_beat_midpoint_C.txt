@@ -1,0 +1,1 @@
+The reason why midpoint_C does not fail is because it copies a bit to the result if it exists in both operands. Then it proceeds to copy the bit if it is set in one operand but not both.

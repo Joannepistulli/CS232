@@ -1,0 +1,1 @@
+The reason why midpoint_B fails is because of the fact it is a 32-bit holder. Due to it being 32-bit holder, it only holds nonnegative numbers in the range of 0 to 4294967295.
