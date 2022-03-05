@@ -11,12 +11,15 @@ int main()
   int i;
   int lowercase, uppercase, digits, other;
   int length;
-  char *t;
   
   puts("Type some text (then ENTER):");
   
   /* Save typed characters in text[]: */
-  t=fgets(text, MAX, stdin);
+    if(fgets(text, MAX, stdin) != NULL){
+    length = strlen(text) - 1;
+  }
+
+
   
   /* Analyse contents of text[]: */
     
@@ -38,12 +41,9 @@ int main()
   }
   
   puts("\nYou typed:");
-  size_t len;
-  len =strlen(text)-1;
   printf("A string with %d characters\n", length);
   printf("\t%d lower case letters\n", lowercase);
   printf("\t%d upper case letters\n", uppercase);
   printf("\t%d digits\n", digits);
   printf("\t%d others\n", other);
-  return 0;
 }

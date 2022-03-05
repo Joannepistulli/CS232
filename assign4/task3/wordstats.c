@@ -9,11 +9,11 @@ int main () {
   int len, i;
   char buf[MAX_BUF];
   char tmp[MAX_BUF];
-
-  do {
+  do{
     strcat(buf, fgets(tmp, MAX_BUF, stdin));
-  } while (tmp[0]!='\n');
-
+    //printf("%s\n", tmp);
+  }while(tmp[0]!='\n');
+  
   len = strlen(buf);
   i=0;
   do {
@@ -32,7 +32,7 @@ int main () {
   printf("Distribution of letters in corpus:\n");
   for (i = 0; i < 26; i++) {
     // 'A' is ASCII code 65
-     printf("%c: %d\n", 65+i, letter_frequency[i]);
+    printf("%c: %d\n", 65+i, letter_frequency[i]);
   }
   return 0;
 }
