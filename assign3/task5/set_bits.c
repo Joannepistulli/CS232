@@ -1,20 +1,28 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include<stdio.h>
+#include<stdlib.h>
 
-// Set the bits of x within range of [start, end], in which both are inclusive
-// Assume 0 <= start & end <= 31
-void set_bits(unsigned * x, unsigned start, unsigned end, unsigned *v) {
+char* convert_2(int dec){
+ char* ans = (char* )malloc(50);
+  int mask = 0x80000000;
+  int i=0,j;
+  ans[i++] = '0';
+  ans[i++] = 'b';
 
-  for(int i = end; i <= start; i--){
-     if(v[i] == 0){
-       x[i]=0;
-     } else{ 
-       x[i]=1;
-     }
+  for(j=0;j<32;j++) {
+      if(j%4 == 0 && j > 0) ans[i++] = ' ';
+     
+      if(dec & mask) ans[i++] = '1';
+      else ans[i++] = '0';
+      dec <<= 1;
   }
-    
-    // YOUR CODE HERE
-    // No return value
-    // v points to an array of at least (end-start+1) unsigned integers.
-    // if v[i] == 0, then set (i+start)-th bit of x zero, otherwise, set (i+start)-th bit of x one.
+  return ans;}
+
+int main() {
+	int n;
+	char * bin;
+	printf("Enter the Decimal Number below \n");
+	scanf("%d",&n);
+	bin = convert_2(n);
+	printf("The Binary Notation of %d is\t %s\n", n, bin);
+  free(bin);
 }
