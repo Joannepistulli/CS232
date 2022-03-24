@@ -4,6 +4,12 @@
 
 /* both of these routines print and sum up numbers i where start <= i < stop */
 
+/* Task 1: 
+Coded by Daniel Basora 
+Logic written by Joanne Pistulli
+Tests ran by Alex Chen
+*/
+
 long
 printSumRangeIterative(int start, int stop)
 {

@@ -3,6 +3,12 @@
 #include "snode.h"
 typedef struct snode node_t;
 
+/* Task 1: 
+Coded by Alex Chen 
+Logic written by Joanne Pistulli
+Tests ran by Daniel Basora
+*/
+
 node_t * setup() {
     //TODO:copy setup func from previous task
 }

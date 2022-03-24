@@ -3,6 +3,12 @@
 
 #include "mystring.h"
 
+/* Task 3: 
+Coded by Alex Chen 
+Logic written by Daniel Basora
+Tests ran by Joanne Pistulli
+*/
+
 int main(int argc, char **argv) {
 	mystring_t *s;
 	
